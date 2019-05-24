@@ -1,10 +1,10 @@
 package com.freeletics.flowredux.businesslogic.pagination
 
 import com.freeletics.flowredux.StateAccessor
-import com.freeletics.rxredux.businesslogic.github.GithubApiFacade
-import com.freeletics.rxredux.businesslogic.github.GithubRepository
-import com.freeletics.rxredux.businesslogic.pagination.PaginationStateMachine.State
-import com.freeletics.rxredux.reduxStore
+import com.freeletics.flowredux.businesslogic.github.GithubApiFacade
+import com.freeletics.flowredux.businesslogic.github.GithubRepository
+import com.freeletics.flowredux.businesslogic.pagination.PaginationStateMachine.State
+import com.freeletics.flowredux.reduxStore
 import com.jakewharton.rxrelay2.PublishRelay
 import com.jakewharton.rxrelay2.Relay
 import io.reactivex.Observable
