@@ -1,7 +1,5 @@
-package com.freeletics.rxredux
+package com.freeletics.flowredux
 
-import com.freeletics.flowredux.SideEffect
-import com.freeletics.flowredux.reduxStore
 import io.kotlintest.matchers.collections.shouldContainExactly
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
