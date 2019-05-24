@@ -8,8 +8,8 @@ import dagger.Provides
 import io.reactivex.Scheduler
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
+import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -17,7 +17,7 @@ open class ApplicationModule(
     private val baseUrl: String,
     private val viewBindingInstantiatorMap: ViewBindingInstantiatorMap,
     private val androidScheduler: Scheduler
-    ) {
+) {
 
     @Provides
     @Singleton
@@ -31,11 +31,10 @@ open class ApplicationModule(
             Retrofit.Builder()
                 .client(okHttp)
                 .addConverterFactory(MoshiConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .baseUrl(baseUrl)
                 .build()
 
-        return retrofit.create(GithubApi::class.java)
+        return retrofit.create()
     }
 
     @Provides

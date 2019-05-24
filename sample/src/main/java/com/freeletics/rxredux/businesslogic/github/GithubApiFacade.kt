@@ -7,7 +7,7 @@ import javax.inject.Inject
  */
 class GithubApiFacade @Inject constructor(private val githubApi: GithubApi) {
 
-    fun loadNextPage(page: Int) = githubApi.search(
+    suspend fun loadNextPage(page: Int) = githubApi.search(
         query = "language:java",
         page = page,
         sort = "stars"

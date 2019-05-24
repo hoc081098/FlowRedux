@@ -65,7 +65,6 @@ dependencies {
     implementation supportLibraries.design
     implementation supportLibraries.viewModel
     implementation libraries.retrofit
-    implementation libraries.retrofitRxJava
     implementation libraries.retrofitMoshi
     implementation libraries.rxRelay
     implementation libraries.rxJava
